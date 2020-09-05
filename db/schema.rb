@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_01_01_220354) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "padrones", force: :cascade do |t|
+  create_table "elecciones", force: :cascade do |t|
     t.string "ano", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

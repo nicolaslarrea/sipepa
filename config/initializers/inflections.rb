@@ -11,6 +11,7 @@
 # end
 
 ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.irregular 'eleccion', 'elecciones'
   inflect.irregular 'padron', 'padrones'
 end
 
