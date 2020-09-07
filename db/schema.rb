@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_01_220354) do
+ActiveRecord::Schema.define(version: 2020_01_02_035650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2020_01_01_220354) do
     t.string "ano", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "votantes", force: :cascade do |t|
+    t.string "documento", null: false
+    t.string "nombre", null: false
+    t.string "titulo", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["documento"], name: "index_votantes_on_documento", unique: true
   end
 
 end
