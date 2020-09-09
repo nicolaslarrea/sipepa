@@ -23,6 +23,13 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# Autenticación.
+gem 'devise'
+
+# Internacionalización.
+gem 'rails-i18n'
+gem 'devise-i18n'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
