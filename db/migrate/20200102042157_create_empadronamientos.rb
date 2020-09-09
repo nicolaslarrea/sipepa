@@ -6,5 +6,7 @@ class CreateEmpadronamientos < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+
+    add_index :empadronamientos, [ :eleccion_id, :votante_id ], unique: true
   end
 end
