@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_01_02_042157) do
     t.bigint "votante_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["eleccion_id", "votante_id"], name: "index_empadronamientos_on_eleccion_id_and_votante_id", unique: true
     t.index ["eleccion_id"], name: "index_empadronamientos_on_eleccion_id"
     t.index ["votante_id"], name: "index_empadronamientos_on_votante_id"
   end
