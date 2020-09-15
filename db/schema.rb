@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_05_040930) do
+ActiveRecord::Schema.define(version: 2020_01_05_042002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "conocidos", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "votante_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "votante_id"], name: "index_conocidos_on_user_id_and_votante_id", unique: true
+    t.index ["user_id"], name: "index_conocidos_on_user_id"
+    t.index ["votante_id"], name: "index_conocidos_on_votante_id"
+  end
 
   create_table "elecciones", force: :cascade do |t|
     t.string "ano", null: false
@@ -54,6 +64,8 @@ ActiveRecord::Schema.define(version: 2020_01_05_040930) do
     t.index ["user_id"], name: "index_votantes_on_user_id", unique: true
   end
 
+  add_foreign_key "conocidos", "users"
+  add_foreign_key "conocidos", "votantes"
   add_foreign_key "empadronamientos", "elecciones"
   add_foreign_key "empadronamientos", "votantes"
   add_foreign_key "votantes", "users"

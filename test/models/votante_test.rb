@@ -20,6 +20,10 @@ describe Votante do
       existente = create(:votante)
       value(build(:votante, documento: existente.documento)).wont_be :valid?
     end
-  end
 
+    it 'tiene una única asociación a user' do
+      existente = create(:votante, :asociado_a_user)
+      value(build(:votante, user_id: existente.user_id)).wont_be :valid?
+    end
+  end
 end
