@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :conocido do
     user
-    votante
+    graduado
   end
 end

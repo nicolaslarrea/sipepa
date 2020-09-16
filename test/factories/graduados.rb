@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :votante do
+  factory :graduado do
     documento { generate :string_unico }
     nombre { generate :string_unico }
     titulo { generate :string_unico }

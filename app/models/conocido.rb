@@ -1,6 +1,6 @@
 class Conocido < ApplicationRecord
   belongs_to :user
-  belongs_to :votante
+  belongs_to :graduado
 
-  validates :user, uniqueness: { scope: :votante }
+  validates :user, uniqueness: { scope: :graduado }
 end
