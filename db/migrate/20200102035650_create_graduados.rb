@@ -1,6 +1,6 @@
-class CreateVotantes < ActiveRecord::Migration[6.0]
+class CreateGraduados < ActiveRecord::Migration[6.0]
   def change
-    create_table :votantes do |t|
+    create_table :graduados do |t|
       t.string :documento, null: false
       t.string :nombre,  null: false
       t.string :titulo, null: false
@@ -8,6 +8,6 @@ class CreateVotantes < ActiveRecord::Migration[6.0]
       t.timestamps
     end
 
-    add_index :votantes, :documento, unique: true
+    add_index :graduados, :documento, unique: true
   end
 end

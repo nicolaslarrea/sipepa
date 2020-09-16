@@ -1,4 +1,4 @@
-class Votante < ApplicationRecord
+class Graduado < ApplicationRecord
   has_many :empadronamientos
   belongs_to :user, required: false
 

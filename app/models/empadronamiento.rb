@@ -1,6 +1,6 @@
 class Empadronamiento < ApplicationRecord
   belongs_to :eleccion
-  belongs_to :votante
+  belongs_to :graduado
 
-  validates :votante_id, uniqueness: { scope: :eleccion_id }
+  validates :graduado_id, uniqueness: { scope: :eleccion_id }
 end
