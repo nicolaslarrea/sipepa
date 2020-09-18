@@ -13,4 +13,12 @@ describe Eleccion do
       value(build(:eleccion, ano: existente.ano)).wont_be :valid?
     end
   end
+
+  describe 'relaciones destroy' do
+    it 'destruye empadronamiento al borrar eleccion' do
+      eleccion = create(:empadronamiento).eleccion
+
+      value(-> { eleccion.destroy }).must_differ 'Empadronamiento.count', -1
+    end
+  end
 end

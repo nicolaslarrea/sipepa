@@ -26,4 +26,12 @@ describe Graduado do
       value(build(:graduado, user_id: existente.user_id)).wont_be :valid?
     end
   end
+
+  describe 'relaciones destroy' do
+    it 'destruye empadronamiento al borrar graduados' do
+      graduado = create(:empadronamiento).graduado
+
+      value(-> { graduado.destroy }).must_differ 'Empadronamiento.count', -1
+    end
+  end
 end
