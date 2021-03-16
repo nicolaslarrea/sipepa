@@ -10,7 +10,7 @@ require("channels")
 
 
 // Librerías que necesitamos.
-import 'bootstrap-material-design'
+import 'bootstrap'
 
 // import de scss
 import '../sipepa/application'
