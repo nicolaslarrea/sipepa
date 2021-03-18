@@ -1,0 +1,11 @@
+---
+es:
+  devise:
+    header:
+      registration_link:
+        account: Cuenta
+        sign_up: Registrarse
+      session_link:
+        sign_in: Entrar
+        sign_out: Salir
+        sign_out_confirmation: "¿Confirma que quiere abandonar la sesión?"
