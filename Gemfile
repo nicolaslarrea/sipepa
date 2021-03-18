@@ -40,6 +40,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'minitest-rails'
   gem 'factory_bot_rails'
+  #Gema necesaria para tests a partir de Ruby 3.0.0
+  gem 'rexml'
 end
 
 group :development do
