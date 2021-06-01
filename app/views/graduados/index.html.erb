@@ -1,5 +1,10 @@
 <h1>Graduados</h1>
 
+<%= form_tag(graduados_path, method: "get") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Ingrese documento o nombre" %>
+  <%= submit_tag "Buscar" %>
+<% end %>
+
 <div class='contenido-acta row rounded-top mb-2 mt-4 mx-1 atributos'>
   <div class='col-3 col-lg-1 align-self-center'>
     Documento
