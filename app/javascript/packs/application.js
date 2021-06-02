@@ -26,6 +26,3 @@ import '../sipepa'
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-// Referenciar todos los js de SIGI.
-import '../sipepa'

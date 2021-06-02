@@ -1,13 +1,8 @@
 <h1>Graduados</h1>
 
-<%= form_tag(graduados_path, method: "get") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Ingrese documento o nombre" %>
-  <%= submit_tag "Buscar" %>
-<% end %>
-
 <div class='col-'>
   <div class="form-group">
-    <%= filtro_graduado_busqueda_documentos_tag %>
+    <%= filtro_graduado_por_documento_o_nombre_tag %>
   </div>
 </div>
 

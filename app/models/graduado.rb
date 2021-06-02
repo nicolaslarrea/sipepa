@@ -9,7 +9,7 @@ class Graduado < ApplicationRecord
   validates :titulo, presence: true
   validates :user, allow_nil: true, uniqueness: true
 
-  pg_search_scope :search_by_documento_or_nombre, :against => [:documento, :nombre],
+  pg_search_scope :buscar_por_documento_o_nombre, :against => [:documento, :nombre],
     using: {
       :tsearch => {:prefix => true}
     }

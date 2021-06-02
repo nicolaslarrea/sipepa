@@ -1,13 +1,10 @@
 class GraduadosController < ApplicationController
 
-  has_scope :con_nombre, only: [:index], as: :nombre
-  has_scope :con_documento, only: [:index], as: :documento
-
-  helper_method :busqueda_documentos_actual
+  helper_method :busqueda_documento_o_nombre_actual
 
   def index
-    if params[:search].present?
-      @graduados = Graduado.search_by_documento_or_nombre(params[:search])
+    if params[:busqueda].present?
+      @graduados = Graduado.buscar_por_documento_o_nombre(params[:busqueda])
     else
       @graduados = Graduado.all
     end
@@ -15,8 +12,8 @@ class GraduadosController < ApplicationController
 
   private
 
-  def busqueda_documentos_actual
-    params[:busqueda_documentos]
+  def busqueda_documento_o_nombre_actual
+    params[:busqueda]
   end
 
   def graduado_params
