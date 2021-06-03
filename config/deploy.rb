@@ -28,7 +28,7 @@ append :linked_files,
 # Puma.
 set :puma_preload_app, true
 set :puma_init_active_record, true
-set :systemd_service_name, 'rananube.service'
+set :systemd_service_name, 'sipepa.service'
 
 # Tareas extras.
 after 'deploy:updated', 'webpacker:precompile'
