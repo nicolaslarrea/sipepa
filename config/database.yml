@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: sipepa_production
-  username: sipepa
-  password: <%= ENV['SIPEPA_DATABASE_PASSWORD'] %>
+  database: <%= Rails.application.credentials.dig(:db, :name) %>
+  username: <%= Rails.application.credentials.dig(:db, :user) %>
+  password: <%= Rails.application.credentials.dig(:db, :password) %>
