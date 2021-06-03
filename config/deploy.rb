@@ -12,7 +12,7 @@ set :rbenv_ruby, File.read('.ruby-version').strip
 
 # rails.
 # Seleccionar la llave de las credenciales según el entorno.
-set :key_path, "config/credentials/#{fetch(:stage)}.key"
+set :key_path, "config/master.key"
 
 append :linked_dirs,
   'log',
