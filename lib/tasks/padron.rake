@@ -4,7 +4,9 @@ require 'colorize'
 namespace :padron do
   desc 'Cargar padrón de elecciones'
   # Este task carga un padrón. Ejemplo de uso:
-  # rails padron:cargar[archivo_del_padron.csv,2019]
+  #   rails padron:cargar[archivo_del_padron.csv,2019]
+  # En producción
+  #   RAILS_ENV=production bin/rails padron:cargar[archivo_del_padron.csv,2019]
   # El csv debe tener las columnas correctamente nombradas:
   #   documento: número de documento
   #   nombre: nombre y apellido
