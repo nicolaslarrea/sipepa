@@ -11,18 +11,11 @@ require("channels")
 // Librerías que necesitamos.
 import 'bootstrap'
 
-// import de scss
-import '../sipepa/application'
+// Referenciar para webpack los estilos de Sipepa(también está boostrap).
+import '../sipepa/stylesheets'
 
 // import de Íconos fontawesome
 import "@fortawesome/fontawesome-free/css/all"
 
 // Referenciar todos los js de Sipepa.
 import '../sipepa'
-
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
