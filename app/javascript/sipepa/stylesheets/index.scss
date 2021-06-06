@@ -1,3 +1,7 @@
+//Variables que modifican los valores default de boostrap. Tienen que estar antes del import de Boostrap.
+$primary: #142a97;
+$body-bg: #f5f5f6;
+
 // Estilos de las librerías que usamos.
 @import "~bootstrap/scss/bootstrap";
 
