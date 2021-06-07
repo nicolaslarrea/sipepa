@@ -16,7 +16,8 @@ module ApplicationHelper
             value,
             data: { url: url, key: key }.merge(data),
             class: 'form-control rounded select-filtro text-filtro',
-            autofocus: value.present?
+            autofocus: value.present?,
+            placeholder: "Nombre o Documento..."
           )
         ]
       ),
