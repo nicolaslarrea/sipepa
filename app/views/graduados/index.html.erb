@@ -1,24 +1,24 @@
-<h1>Graduados</h1>
+<div class="row">
+  <div class="col text-center">
+    <h2 class= "mb-3 mt-4">Padrón 2019</h2>
 
-<div class='col-'>
-  <div class="form-group">
-    <%= filtro_graduado_por_documento_o_nombre_tag %>
+    <div class="form-group">
+      <%= filtro_graduado_por_documento_o_nombre_tag %>
+    </div>
+
+    <div class='row rounded-top mb-2 mt-4 mx-1'>
+      <div class='col-4 col-lg-3 align-self-center'>
+        Documento
+      </div>
+      <div class='col-8 col-lg-5 align-self-center'>
+        Nombre
+      </div>
+      <div class='col-4 d-none d-lg-block col-lg-4 align-self-center'>
+        Carrera
+      </div>
+    </div>
+
+    <%= render @graduados %>
+
   </div>
 </div>
-
-
-<div class='contenido-acta row rounded-top mb-2 mt-4 mx-1 atributos'>
-  <div class='col-3 col-lg-1 align-self-center'>
-    Documento
-  </div>
-  <div class='d-none d-lg-block col-lg-2 align-self-center'>
-    Nombre
-  </div>
-  <div class='d-none d-lg-block col-lg-2 align-self-center'>
-    Carrera
-  </div>
-  <div class='d-none d-lg-block col-lg-2 align-self-center'>
-  </div>
-</div>
-
-<%= render @graduados %>
