@@ -10,6 +10,12 @@ class GraduadosController < ApplicationController
     end
   end
 
+  #Para búsqueda binaria de graduados por documento.
+  def busqueda
+    @buscado = params[:search]
+    @graduado = Graduado.search(params[:search])
+  end
+
   private
 
   def busqueda_documento_o_nombre_actual
@@ -17,6 +23,6 @@ class GraduadosController < ApplicationController
   end
 
   def graduado_params
-  params.require(:graduado).permit(:documento, :nombre, :carrera)
+  params.require(:graduado).permit(:documento, :nombre, :carrera, :search)
   end
 end
