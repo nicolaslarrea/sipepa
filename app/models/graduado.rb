@@ -13,4 +13,13 @@ class Graduado < ApplicationRecord
     using: {
       :tsearch => {:prefix => true}
     }
+
+  #Busqueda para graduados binaria
+  def self.search(search)
+    if search
+      self.find_by(documento:search)
+    else
+      nil
+    end
+  end
 end
