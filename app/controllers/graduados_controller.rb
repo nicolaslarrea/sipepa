@@ -10,11 +10,12 @@ class GraduadosController < ApplicationController
     end
   end
 
-  #Para búsqueda binaria de graduados por documento.
+  # Para búsqueda binaria de graduados por documento.
   def busqueda
     @eleccion_actual = Eleccion.last.ano
     @buscado = params[:search]
-    @graduado = Eleccion.last.graduados.search(params[:search])
+    #Quita los "." de los números que se buscan.
+    @graduado = Eleccion.last.graduados.search(params[:search]&.tr('.', ''))
   end
 
   private
