@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-6 text-center form-signin">
-    <h2 class= "m-3">¿Estoy en el Padrón 2019?</h2>
+    <h2 class= "m-3">¿Estoy en el Padrón <%= @eleccion_actual %>?</h2>
 
     <div class="form-floating">
       <%= form_with(url: busqueda_graduados_path, method: 'get', local: true) do %>
@@ -16,7 +16,8 @@
       <h3>El documento <%= @graduado.documento %> se encuentra en el padrón.</h3>
     <% elsif @buscado %>
       <i class="fas fa-times-circle fa-10x text-danger m-4"></i>
-      <h3>Si pensas que tenías que estar en el padrón, manda mail a algún@mail.com.</h3>
+      <h3>Si pensas que tenías que estar en el padrón, manda mail a</h3>
+      <h6><%= mail_to 'frentedegraduadxspsico@gmail.com', "frentedegraduadxspsico@gmail.com" %></h6>
     <% end %>
 
   </div>

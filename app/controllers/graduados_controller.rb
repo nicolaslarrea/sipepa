@@ -12,8 +12,9 @@ class GraduadosController < ApplicationController
 
   #Para búsqueda binaria de graduados por documento.
   def busqueda
+    @eleccion_actual = Eleccion.last.ano
     @buscado = params[:search]
-    @graduado = Graduado.search(params[:search])
+    @graduado = Eleccion.last.graduados.search(params[:search])
   end
 
   private

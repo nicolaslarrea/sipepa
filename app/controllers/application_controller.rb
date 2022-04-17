@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  # Se usaba para autenticar toda la app.
+  # before_action :authenticate_user!
 
 end
